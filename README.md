@@ -28,6 +28,6 @@ runtime目录为函数运行时，compute为计算节点，redismodule为定制�
 chmod +x build.sh <br>
 bash build.sh
 
-##使用说明
+## 使用说明
 docker exec -it compute1 batch khop 1 1000
 docker exec -it compute1 redisclient khop 1 1000
