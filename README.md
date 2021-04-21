@@ -10,10 +10,10 @@
 
 ##技术架构
 系统架构
-![image](https://github.com/742362144/AutoLoc/raw/master/img/fig1.jpg)
+![image](https://github.com/742362144/AutoLoc/blob/main/img/fig1.png)
 
 函数状态转换
-![image](https://github.com/742362144/AutoLoc/raw/master/img/fig2.jpg)
+![image](https://github.com/742362144/AutoLoc/blob/main/img/fig2.png)
 
 ##技术特色
 系统基于计算函数运行时行为分析的动态放置优化方法，通过对主流的存储系统如Redis进行定制化改造，使其支持计算函数的放置和运行，再对计算函数运行时分析其在存储端和计算端的损失和收益并通过评估来决定计算函数最优的运行位置，最终获得计算函数放置方案。
