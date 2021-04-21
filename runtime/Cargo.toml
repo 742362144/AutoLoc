@@ -1,0 +1,30 @@
+[package]
+name = "runtime"
+version = "0.1.0"
+authors = ["742362144 <742362144@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "bench"
+path = "src/bin/bench.rs"
+
+[dependencies]
+x86 = "0.34.0"
+time = "0.2.23"
+redis-module = "0.11.0"
+redis = "0.19.0"
+libloading = "0.3"
+systemstat = "0.1.6"
+rustlearn = "0.5.0"
+rand = "0.3.17"
+md5 = "0.7.0"
+serde_json = "1.0.64"
+#openssl = "0.10.32"
+
+#[dependencies.redis-module]
+#version = "0.11.0"
+#default-features = false # do not include the default features, and optionally
+## cherry-pick individual features
+#features = ["experimental-api"]

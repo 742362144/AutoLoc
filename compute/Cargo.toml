@@ -1,0 +1,98 @@
+[package]
+name = "compute"
+version = "0.1.0"
+authors = ["742362144 <742362144@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+#[[bin]]
+#name = "server"
+#path = "src/bin/server.rs"
+#required-features= ["generator_trait", "generators"]
+
+
+#[[bin]]
+#name = "client"
+#path = "src/bin/client.rs"
+
+[[bin]]
+name = "redisclient"
+path = "src/bin/redisclient.rs"
+
+#[[bin]]
+#name = "main"
+#path = "src/bin/main.rs"
+
+[[bin]]
+name = "batch"
+path = "src/bin/batch.rs"
+
+
+[[bin]]
+name = "bench"
+path = "src/bin/bench.rs"
+
+#[[example]]
+#name = "module"
+#crate-type = ["cdylib"]
+#required-features = ["experimental-api"]
+
+[dependencies]
+tonic = { version = "0.1.0", features = ["tls"] }
+prost = "0.6"
+tokio = { version = "0.2", features = ["rt-threaded", "time", "stream", "fs", "macros", "uds"] }
+#futures = { version = "0.3", default-features = false, features = ["alloc"] }
+async-stream = "0.2"
+tower = "0.3"
+# Required for routeguide
+serde = { version = "1.0", features = ["derive"] }
+# Tracing
+tracing = "0.1.16"
+tracing-subscriber = { version = "0.2", features = ["tracing-log"] }
+tracing-attributes = "0.1"
+tracing-futures = "0.2"
+# Required for wellknown types
+prost-types = "0.6"
+# Hyper example
+hyper = "0.13"
+warp = { version = "0.2", default-features = false }
+http = "0.2"
+http-body = "0.3"
+pin-project = "0.4.17"
+# Health example
+tonic-health = { version = "0.2.0" }
+listenfd = "0.3"
+serde_json = "1.0.64"
+async-task = "1.3.0"
+crossbeam = "0.7.3"
+futures = "0.3.1"
+once_cell = "1.3.1"
+
+byteorder = "1"
+hashbrown = "0.1.8"
+libc = "0.2.43"
+libloading = "0.3"
+spin = "0.4.7"
+x86 = "0.34.0"
+time = "0.2.23"
+rand = "0.8.1"
+log = "0.4.8"
+redis = "0.19.0"
+rustc-serialize = "0.3.18"
+clap = "2.33.3"
+runtime = {path = "../runtime"}
+
+
+[dependencies.redis-module]
+version = "0.11.0"
+default-features = false # do not include the default features, and optionally
+# cherry-pick individual features
+features = ["experimental-api"]
+
+
+[build-dependencies]
+tonic-build = { version = "0.3.1", features = ["prost"] }
+
+[profile.release]
+panic = 'abort'
