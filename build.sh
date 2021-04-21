@@ -6,14 +6,12 @@ cd $SHELL_FOLDER
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 cd $SHELL_FOLDER"/compute"
-pwd
 chmod +x build.sh
-pwd
-bash build.sh
+./build.sh
 
 cd $SHELL_FOLDER"/redismodule"
 chmod +x build.sh
-bash build.sh
+./build.sh
 
 docker rm -f storageloc compute1 compute2
 
