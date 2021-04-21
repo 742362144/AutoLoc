@@ -3,7 +3,7 @@ import json
 
 import random
 
-r = redis.Redis(host='133.133.135.22', port=6379, decode_responses=True)
+r = redis.Redis(host='127.0.0.1', port=6379, decode_responses=True)
 # r = redis.Redis(host='192.168.137.144', port=6379, decode_responses=True)
 
 # r.set("aaa", 1)
