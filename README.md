@@ -21,7 +21,9 @@
 注：模块层级关系及说明
 
 ##部署方式
-提前安装redis（6.2）和Docker。
+安装redis（6.2）和Docker。
+安装rust 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ##使用说明
 

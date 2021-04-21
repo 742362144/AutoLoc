@@ -3,7 +3,7 @@
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 cd $SHELL_FOLDER
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 cd $SHELL_FOLDER"/compute"
 chmod +x build.sh
